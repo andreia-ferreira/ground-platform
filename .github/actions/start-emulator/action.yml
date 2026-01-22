@@ -16,7 +16,7 @@ name: Start Firebase emulator for Android tests
 inputs:
   platform-repository:
     description: "ground-platform repository under test"
-    default: google/ground-platform
+    default: andreia-ferreira/ground-platform
 
 runs:
   using: "composite"
