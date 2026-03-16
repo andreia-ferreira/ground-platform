@@ -27,6 +27,7 @@ runs:
         repository: ${{ inputs.platform-repository }}
 
     - name: Force Angular 20 versions
+      shell: bash
       run: |
         pnpm add -w \
         @angular/core@20.3.18 \
