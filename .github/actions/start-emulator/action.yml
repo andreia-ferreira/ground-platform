@@ -27,6 +27,7 @@ runs:
         repository: ${{ inputs.platform-repository }}
     
     - name: Clean workspace
+      shell: bash
       run: |
         rm -rf node_modules dist pnpm-lock.yaml
 
