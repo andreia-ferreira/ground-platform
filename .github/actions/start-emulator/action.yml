@@ -37,6 +37,11 @@ runs:
     - name: Set up environment
       uses: ./.github/actions/setup
 
+    - name: Switch to Node 20 for Firebase emulator
+      uses: actions/setup-node@v6
+      with:
+        node-version: 20
+
     - name: Start Firebase emulator with Android test data
       shell: bash
       run: |
