@@ -26,14 +26,6 @@ runs:
       with:
         repository: ${{ inputs.platform-repository }}
 
-    - name: Load cached Firebase emulator
-      uses: actions/cache@v4
-      with:
-        path: ~/.cache/firebase/emulators
-        key: ${{ runner.os }}-firebase-emulators-${{ github.sha }}
-        restore-keys: |
-          ${{ runner.os }}-firebase-emulators-
-
     - name: Set up environment
       uses: ./.github/actions/setup
 
