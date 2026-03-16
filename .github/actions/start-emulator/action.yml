@@ -37,6 +37,13 @@ runs:
     - name: Set up environment
       uses: ./.github/actions/setup
 
+    - name: Debug Angular versions in CI
+      shell: bash
+      run: |
+        grep "@angular/compiler" pnpm-lock.yaml | head -20
+        grep "@angular-eslint" pnpm-lock.yaml | head -20
+        pnpm list @angular/compiler @angular-eslint/bundled-angular-compiler --depth=0
+
     - name: Start Firebase emulator with Android test data
       shell: bash
       run: |
