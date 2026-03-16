@@ -19,6 +19,15 @@ runs:
       with:
         version: 9
 
+    - name: Force Angular 20 versions
+      shell: bash
+      run: |
+        pnpm add -w \
+        @angular/core@20.3.18 \
+        @angular/compiler@20.3.18 \
+        @angular/compiler-cli@20.3.18 \
+        @angular/cli@20.3.18
+
     - name: Set up Node.js
       uses: actions/setup-node@v6
       with:
