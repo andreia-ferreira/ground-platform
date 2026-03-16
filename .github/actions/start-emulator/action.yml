@@ -56,3 +56,11 @@ runs:
         cat firebase-emulator.log
         exit 1
         
+    - name: Upload Firebase emulator log
+      if: always()
+      uses: actions/upload-artifact@v6
+      with:
+        name: firebase-emulator-log
+        path: firebase-emulator.log
+        retention-days: 7
+        if-no-files-found: warn   
