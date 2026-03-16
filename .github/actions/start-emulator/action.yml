@@ -25,11 +25,6 @@ runs:
       uses: actions/checkout@v4
       with:
         repository: ${{ inputs.platform-repository }}
-    
-    - name: Pin Angular & NX versions
-      shell: bash
-      run: |
-        pnpm add -w @angular/core@15 @angular/compiler@15 @angular/compiler-cli@15 @angular/cli@15 @nrwl/angular@15 @nrwl/workspace@15
 
     - name: Load cached Firebase emulator
       uses: actions/cache@v4
