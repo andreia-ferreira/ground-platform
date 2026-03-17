@@ -46,7 +46,7 @@ runs:
       shell: bash
       run: |
         MAX_TRIES=60
-        pnpm exec nx start-android-test-data > firebase-emulator.log 2>&1 &
+        stdbuf -oL -eL pnpm exec nx start-android-test-data > firebase-emulator.log 2>&1 &
         EMULATOR_PID=$!
     
         for ((i=1; i<=$MAX_TRIES; i++)); do
