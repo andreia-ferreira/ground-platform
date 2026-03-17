@@ -65,7 +65,7 @@
         "options": {
           "commands": [
             "firebase experiments:enable webframeworks",
-            "firebase emulators:start --project demo-local --config firebase.local.json --import data/test-android"
+            "firebase emulators:start --project demo-local --config firebase.local.json --import data/test-android --export-on-exit data/test-android-result"
           ]
         },
         "dependsOn": [
