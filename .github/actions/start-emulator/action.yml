@@ -42,10 +42,6 @@ runs:
       with:
         node-version: 20
 
-    - name: Pin TypeScript for Angular build
-      shell: bash
-      run: pnpm add -Dw typescript@5.5.4
-
     - name: Start Firebase emulator with Android test data
       shell: bash
       run: |
