@@ -66,11 +66,3 @@ runs:
         echo "Firebase Emulator failed to start"
         cat firebase-emulator.log
         exit 1
-
-    - name: Upload Firebase emulator logs
-      if: always()
-      uses: actions/upload-artifact@v6
-      with:
-        name: firebase-emulator-logs
-        path: firebase-emulator.log
-        
